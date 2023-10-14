@@ -1,0 +1,23 @@
+#include <iostream>
+#include <stdexcept>
+
+void checkVoterEligibility(int age) {
+    if (age < 18) {
+        throw std::invalid_argument("Voter is not eligible due to age.");
+    }
+    std::cout << "Voter is eligible." << std::endl;
+}
+
+int main() {
+    int age;
+    std::cout << "Enter your age: ";
+    std::cin >> age;
+
+    try {
+        checkVoterEligibility(age);
+    } catch (const std::invalid_argument &e) {
+        std::cerr << "Invalid Argument: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
