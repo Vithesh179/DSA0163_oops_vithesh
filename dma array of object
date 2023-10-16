@@ -1,0 +1,18 @@
+nclude <iostream>
+class A {
+  public:
+   void displayMessage() {
+    std::cout << "vinaydinesh" << std::endl;
+  }
+};
+int main() {
+  int size;
+  std::cout << "Input the size of the array: ";
+  std::cin >> size;
+  A *p = new A[size];
+  for (int i = 0; i < size; i++) {
+    p[i].displayMessage();
+  }
+  delete[] p;
+  return 0;
+}
