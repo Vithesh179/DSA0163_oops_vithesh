@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+class vithesh
+{
+public:
+vithesh() {
+cout << "constructor" << endl;
+}
+~vithesh() {
+cout << "Destructor" << endl;
+}
+};
+int main()
+{
+vithesh* a = new vithesh[3];
+delete [] a; 
+return 0;
+}
